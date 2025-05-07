@@ -89,6 +89,33 @@
             color: #888;
         }
 
+        .template-info {
+            background-color: #e2f0f9;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .variation-display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .color-sample {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -110,6 +137,18 @@
     <p>Upload an Excel (.xlsx) or Text (.txt) file to send emails.</p>
     <p><strong>Excel format:</strong> Column: email</p>
     <p><strong>Text format:</strong> One email per line</p>
+
+    <div class="template-info">
+        <p><strong>Unique Content for Every Email</strong></p>
+        <p>Each email sent has unique content and styling while maintaining your brand identity and links.</p>
+        <div class="variation-display">
+            <span class="color-sample" style="background: linear-gradient(135deg, #ff4d4d, #e63939);"></span>
+            <span class="color-sample" style="background: linear-gradient(135deg, #3498db, #2980b9);"></span>
+            <span class="color-sample" style="background: linear-gradient(135deg, #27ae60, #2ecc71);"></span>
+            <span class="color-sample" style="background: linear-gradient(135deg, #f39c12, #e67e22);"></span>
+            <span class="color-sample" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);"></span>
+        </div>
+    </div>
 
     <form method="post" enctype="multipart/form-data" action="{{ url_for('upload_file') }}" onsubmit="showLoading()">
         <input type="file" name="file" accept=".xlsx,.txt" required>
