@@ -25,7 +25,7 @@ SENDER_NAME = "StrongBody"
 email_counter = 0
 
 # Fixed link for all emails
-FIXED_LINK = "https://strongbody.ai/?ref=stronghealth"
+FIXED_LINK = "https://strongbody.ai/?ref=alison-olivia"
 
 # Button color variations
 BUTTON_COLORS = [
@@ -192,6 +192,232 @@ EMAIL_CONTENTS = [
         ],
         "cta_text": "Upgrade Your Practice",
         "closing": "Step into the future of healthcare delivery with StrongBody.ai."
+    },
+    # New content variations (15 more)
+    {
+        "subject": "AI-Powered Healthcare Solutions from StrongBody.ai",
+        "greeting": "Dear Healthcare Innovator,",
+        "intro": "At <strong>StrongBody.ai</strong>, we're leveraging the power of artificial intelligence to transform healthcare delivery and patient outcomes.",
+        "body_text": "Our AI-powered platform analyzes health data to provide personalized recommendations and insights that support both providers and patients.",
+        "features_title": "AI-Driven Capabilities",
+        "features": [
+            "Predictive analytics for early detection and prevention",
+            "Smart scheduling that optimizes patient flow",
+            "Automated documentation with natural language processing",
+            "Personalized health plan generation through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Explore AI Solutions",
+        "closing": "Discover the future of AI-enhanced healthcare with StrongBody.ai."
+    },
+    {
+        "subject": "Streamline Your Practice with StrongBody.ai",
+        "greeting": "Dear Medical Professional,",
+        "intro": "<strong>StrongBody.ai</strong> offers powerful tools to streamline your practice operations while enhancing patient care quality.",
+        "body_text": "Our platform reduces administrative burden and optimizes workflows, allowing you to focus more time on what matters most - your patients.",
+        "features_title": "Efficiency Advantages",
+        "features": [
+            "Automated appointment scheduling and reminders",
+            "Digital intake forms and documentation",
+            "Integrated billing and payment processing",
+            "Patient engagement through the <strong>Multi.Me</strong> platform"
+        ],
+        "cta_text": "Streamline Now",
+        "closing": "Join healthcare providers who have increased efficiency by 30% with StrongBody.ai."
+    },
+    {
+        "subject": "Build a Stronger Patient Relationship with StrongBody.ai",
+        "greeting": "Dear Health Specialist,",
+        "intro": "<strong>StrongBody.ai</strong> empowers you to build stronger, more meaningful relationships with your patients through enhanced communication tools.",
+        "body_text": "Our platform facilitates continuous engagement beyond in-person visits, creating a supportive environment for improved patient outcomes.",
+        "features_title": "Relationship-Building Tools",
+        "features": [
+            "Secure messaging for ongoing patient communication",
+            "Educational resource sharing capabilities",
+            "Progress tracking and celebration of milestones",
+            "Community support through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Strengthen Connections",
+        "closing": "Transform your patient relationships with StrongBody.ai's innovative engagement tools."
+    },
+    {
+        "subject": "Data-Driven Healthcare with StrongBody.ai",
+        "greeting": "Dear Healthcare Provider,",
+        "intro": "<strong>StrongBody.ai</strong> harnesses the power of data to transform healthcare delivery and improve patient outcomes.",
+        "body_text": "Our comprehensive analytics platform turns complex health data into actionable insights that drive better clinical decisions and operational efficiency.",
+        "features_title": "Analytics Capabilities",
+        "features": [
+            "Population health management dashboards",
+            "Treatment outcome analysis and benchmarking",
+            "Resource utilization and optimization tools",
+            "Patient engagement metrics through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Leverage Your Data",
+        "closing": "Make informed decisions based on powerful analytics with StrongBody.ai."
+    },
+    {
+        "subject": "Collaborative Care Networks with StrongBody.ai",
+        "greeting": "Dear Healthcare Professional,",
+        "intro": "<strong>StrongBody.ai</strong> facilitates seamless collaboration between providers to deliver truly integrated patient care.",
+        "body_text": "Our platform connects specialists, primary care providers, and allied health professionals in a unified ecosystem focused on patient-centered care.",
+        "features_title": "Collaboration Features",
+        "features": [
+            "Secure case sharing and consultation requests",
+            "Multi-disciplinary care plan development tools",
+            "Coordinated care tracking and management",
+            "Patient involvement through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Join Our Network",
+        "closing": "Experience the power of collaborative healthcare with StrongBody.ai."
+    },
+    {
+        "subject": "Preventive Health Solutions with StrongBody.ai",
+        "greeting": "Dear Health Practitioner,",
+        "intro": "<strong>StrongBody.ai</strong> empowers you to shift from reactive to proactive healthcare through advanced preventive tools.",
+        "body_text": "Our platform identifies risk factors and provides early intervention strategies to help patients maintain optimal health and prevent disease progression.",
+        "features_title": "Preventive Capabilities",
+        "features": [
+            "Risk stratification and early warning systems",
+            "Personalized prevention plan generation",
+            "Lifestyle modification tracking and support",
+            "Wellness community through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Prevent, Don't Just Treat",
+        "closing": "Lead the preventive health revolution with StrongBody.ai."
+    },
+    {
+        "subject": "Remote Patient Monitoring with StrongBody.ai",
+        "greeting": "Dear Healthcare Provider,",
+        "intro": "<strong>StrongBody.ai</strong> offers advanced remote patient monitoring capabilities to extend care beyond facility walls.",
+        "body_text": "Our platform enables continuous monitoring of patient health metrics, allowing for timely interventions and personalized care adjustments.",
+        "features_title": "Monitoring Capabilities",
+        "features": [
+            "Integration with wearable devices and home monitors",
+            "Real-time alerts for concerning changes in vital signs",
+            "Trend analysis and pattern recognition",
+            "Patient data sharing through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Monitor Remotely",
+        "closing": "Extend your reach and improve outcomes with StrongBody.ai's remote monitoring tools."
+    },
+    {
+        "subject": "Specialized Care Management with StrongBody.ai",
+        "greeting": "Dear Specialist Provider,",
+        "intro": "<strong>StrongBody.ai</strong> offers tailored solutions for managing patients with complex and chronic conditions.",
+        "body_text": "Our specialized care management tools help you deliver comprehensive, coordinated care for patients with multiple health needs.",
+        "features_title": "Specialized Management Tools",
+        "features": [
+            "Condition-specific treatment protocol libraries",
+            "Comorbidity management assistance",
+            "Long-term care planning and tracking",
+            "Support networks through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Specialize Your Care",
+        "closing": "Enhance your specialized practice with StrongBody.ai's comprehensive management tools."
+    },
+    {
+        "subject": "Enhance Patient Education with StrongBody.ai",
+        "greeting": "Dear Healthcare Educator,",
+        "intro": "<strong>StrongBody.ai</strong> provides powerful patient education tools to improve health literacy and treatment adherence.",
+        "body_text": "Our platform includes a comprehensive library of educational resources that can be personalized to each patient's needs and learning style.",
+        "features_title": "Education Features",
+        "features": [
+            "Multimedia educational content library",
+            "Personalized learning plans for patients",
+            "Comprehension assessments and feedback",
+            "Peer learning through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Educate Effectively",
+        "closing": "Transform patient understanding and compliance with StrongBody.ai's education tools."
+    },
+    {
+        "subject": "Scale Your Practice with StrongBody.ai",
+        "greeting": "Dear Healthcare Entrepreneur,",
+        "intro": "<strong>StrongBody.ai</strong> provides the technological infrastructure needed to scale your healthcare practice efficiently.",
+        "body_text": "Our platform supports practice growth with tools that maintain high-quality care while expanding your patient base and service offerings.",
+        "features_title": "Scaling Capabilities",
+        "features": [
+            "Patient acquisition and retention tools",
+            "Workflow automation for increased capacity",
+            "Provider recruiting and onboarding assistance",
+            "Network expansion through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Scale Strategically",
+        "closing": "Grow your practice without compromising care quality with StrongBody.ai."
+    },
+    {
+        "subject": "Evidence-Based Practice with StrongBody.ai",
+        "greeting": "Dear Clinical Professional,",
+        "intro": "<strong>StrongBody.ai</strong> supports evidence-based healthcare delivery through integration of latest research and best practices.",
+        "body_text": "Our platform keeps you updated with relevant clinical guidelines and research findings, helping you deliver care based on the most current evidence.",
+        "features_title": "Evidence-Based Tools",
+        "features": [
+            "Clinical decision support based on latest guidelines",
+            "Personalized treatment recommendation engine",
+            "Outcome tracking against evidence-based benchmarks",
+            "Professional discussion forums in <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Practice with Confidence",
+        "closing": "Deliver evidence-based care consistently with StrongBody.ai's intelligent support tools."
+    },
+    {
+        "subject": "Customized Healthcare Solutions from StrongBody.ai",
+        "greeting": "Dear Healthcare Innovator,",
+        "intro": "<strong>StrongBody.ai</strong> offers highly customizable solutions that adapt to your unique practice needs and specializations.",
+        "body_text": "Our flexible platform can be tailored to support your specific workflows, patient populations, and clinical focus areas.",
+        "features_title": "Customization Options",
+        "features": [
+            "Configurable workflows and clinical pathways",
+            "Specialty-specific templates and tools",
+            "Brand integration and personalization options",
+            "Custom community groups in <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Customize Your Solution",
+        "closing": "Experience healthcare technology that adapts to you, not the other way around."
+    },
+    {
+        "subject": "Secure Healthcare Communication with StrongBody.ai",
+        "greeting": "Dear Healthcare Provider,",
+        "intro": "<strong>StrongBody.ai</strong> provides HIPAA-compliant, secure communication tools for healthcare teams and patients.",
+        "body_text": "Our platform ensures that sensitive health information remains protected while enabling efficient communication and collaboration.",
+        "features_title": "Security Features",
+        "features": [
+            "End-to-end encrypted messaging and file sharing",
+            "Role-based access controls for sensitive information",
+            "Secure video consultation environment",
+            "Privacy-focused social interactions in <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Communicate Securely",
+        "closing": "Protect patient information while enhancing communication with StrongBody.ai."
+    },
+    {
+        "subject": "Behavioral Health Integration with StrongBody.ai",
+        "greeting": "Dear Healthcare Provider,",
+        "intro": "<strong>StrongBody.ai</strong> supports the integration of behavioral health into primary care and specialized medical practices.",
+        "body_text": "Our platform facilitates whole-person care by providing tools to address both physical and mental health needs in a coordinated manner.",
+        "features_title": "Behavioral Health Tools",
+        "features": [
+            "Mental health screening and assessment integration",
+            "Collaborative care planning for mind-body approaches",
+            "Mood and behavioral tracking capabilities",
+            "Supportive peer communities in <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Integrate Behavioral Health",
+        "closing": "Deliver truly holistic care with StrongBody.ai's behavioral health integration tools."
+    },
+    {
+        "subject": "Healthcare Financial Optimization with StrongBody.ai",
+        "greeting": "Dear Practice Manager,",
+        "intro": "<strong>StrongBody.ai</strong> helps optimize the financial performance of your healthcare practice while maintaining focus on quality care.",
+        "body_text": "Our platform includes tools to streamline billing, reduce administrative costs, and maximize appropriate reimbursement for services provided.",
+        "features_title": "Financial Tools",
+        "features": [
+            "Automated coding assistance and charge capture",
+            "Payment processing and patient financing options",
+            "Revenue cycle analytics and optimization",
+            "Value-based care support through <strong>Multi.Me</strong>"
+        ],
+        "cta_text": "Optimize Financially",
+        "closing": "Improve your practice's financial health while delivering excellent patient care with StrongBody.ai."
     }
 ]
 

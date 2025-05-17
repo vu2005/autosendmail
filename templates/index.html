@@ -2,173 +2,561 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>StrongBody.ai Email Sender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrongBody.ai Partnership Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #e6f7fa, #d1e8eb);
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004d99;
+            --secondary: #2ecc71;
+            --secondary-dark: #27ae60;
+            --accent: #9b59b6;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --success-light: #d4edda;
+            --danger: #dc3545;
+            --danger-light: #f8d7da;
+            --info: #17a2b8;
+            --info-light: #d1ecf1;
+        }
+
+        * {
             margin: 0;
-            padding: 40px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: fadeIn 1s ease-in;
         }
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            animation: slideDown 0.5s ease-out;
-        }
-
-        p {
-            color: #34495e;
-            margin: 4px 0;
-            animation: fadeIn 1.5s ease;
-        }
-
-        form {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+        .navbar {
             width: 100%;
-            max-width: 500px;
-            text-align: center;
-            animation: fadeUp 1s ease-in-out;
-        }
-
-        input[type="file"] {
-            margin-bottom: 20px;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        button {
-            background: #28a745;
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #218838;
-        }
-
-        .message {
-            padding: 12px;
-            margin-top: 12px;
-            border-radius: 6px;
-            font-weight: bold;
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .success {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .error {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-
-        #loading {
-            display: none;
-            margin-top: 15px;
-            font-style: italic;
-            color: #888;
-        }
-
-        .template-info {
-            background-color: #e2f0f9;
-            color: #0c5460;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .variation-display {
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+            margin-bottom: 30px;
         }
 
-        .color-sample {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+        .navbar-content {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 30px;
+            animation: slideUp 0.8s ease;
+        }
+
+        .card-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .card-header h2 i {
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .file-upload {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .file-upload-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 30px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-label:hover {
+            border-color: var(--primary);
+            background-color: rgba(0, 102, 204, 0.03);
+        }
+
+        .file-upload-label i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .file-upload-label p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .file-upload-label small {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 8px;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: none;
+        }
+
+        .btn {
             display: inline-block;
-            margin: 0 5px;
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .templates {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .templates-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .templates-header h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-right: 15px;
+        }
+
+        .badge {
+            background-color: var(--info-light);
+            color: var(--info);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .template-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            margin: 0 -20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #eee;
+        }
+
+        .template-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .template-carousel::-webkit-scrollbar-track {
+            background: #eee;
+            border-radius: 10px;
+        }
+
+        .template-carousel::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 10px;
+            border: 2px solid #eee;
+        }
+
+        .template-item {
+            flex: 0 0 auto;
+            width: 200px;
+            padding: 15px;
+            margin: 0 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .template-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .template-color {
+            width: 100%;
+            height: 80px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .template-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .status-container {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .status-message {
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .status-message i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .status-success {
+            background-color: var(--success-light);
+            color: var(--success);
+        }
+
+        .status-error {
+            background-color: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .status-info {
+            background-color: var(--info-light);
+            color: var(--info);
+        }
+
+        .progress-container {
+            margin-top: 20px;
+            display: none;
+            width: 100%;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 5px;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            padding: 25px 0;
+            background-color: white;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        @keyframes fadeUp {
+        @keyframes slideUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        @media (max-width: 768px) {
+            .card {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .template-item {
+                width: 150px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>StrongBody.ai Email Sender</h1>
-    <p>Upload an Excel (.xlsx) or Text (.txt) file to send emails.</p>
-    <p><strong>Excel format:</strong> Column: email</p>
-    <p><strong>Text format:</strong> One email per line</p>
-
-    <div class="template-info">
-        <p><strong>Unique Content for Every Email</strong></p>
-        <p>Each email sent has unique content and styling while maintaining your brand identity and links.</p>
-        <div class="variation-display">
-            <span class="color-sample" style="background: linear-gradient(135deg, #ff4d4d, #e63939);"></span>
-            <span class="color-sample" style="background: linear-gradient(135deg, #3498db, #2980b9);"></span>
-            <span class="color-sample" style="background: linear-gradient(135deg, #27ae60, #2ecc71);"></span>
-            <span class="color-sample" style="background: linear-gradient(135deg, #f39c12, #e67e22);"></span>
-            <span class="color-sample" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);"></span>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                StrongBody.ai
+            </div>
         </div>
     </div>
 
-    <form method="post" enctype="multipart/form-data" action="{{ url_for('upload_file') }}" onsubmit="showLoading()">
-        <input type="file" name="file" accept=".xlsx,.txt" required>
-        <br>
-        <button type="submit">📤 Upload and Send</button>
-        <div id="loading">⏳ Sending emails, please wait...</div>
-    </form>
+    <div class="container">
+        <div class="header">
+            <h1>Partnership Outreach Portal</h1>
+            <p>Connect with healthcare professionals and expand your network with our advanced outreach system.</p>
+        </div>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="message {{ category }}">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-paper-plane"></i> Email Campaign Manager</h2>
+            </div>
+
+            <form method="post" enctype="multipart/form-data" action="{{ url_for('upload_file') }}" id="emailForm">
+                <div class="file-upload">
+                    <label for="file-input" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your contact list or click to browse</p>
+                        <small>Accepted formats: Excel (.xlsx) or Text (.txt)</small>
+                    </label>
+                    <input type="file" id="file-input" name="file" accept=".xlsx,.txt" required>
+                    <div class="file-name" id="file-name"></div>
+                </div>
+
+                <div class="templates">
+                    <div class="templates-header">
+                        <h3>Email Templates</h3>
+                        <span class="badge">10 Professional Variations</span>
+                    </div>
+
+                    <div class="template-carousel">
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #ff4d4d, #e63939);"></div>
+                            <div class="template-name">Professional Red</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #3498db, #2980b9);"></div>
+                            <div class="template-name">Corporate Blue</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #27ae60, #2ecc71);"></div>
+                            <div class="template-name">Health Green</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #f39c12, #e67e22);"></div>
+                            <div class="template-name">Vibrant Orange</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);"></div>
+                            <div class="template-name">Premium Purple</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #1abc9c, #16a085);"></div>
+                            <div class="template-name">Medical Teal</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #34495e, #2c3e50);"></div>
+                            <div class="template-name">Executive Dark</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #f1c40f, #f39c12);"></div>
+                            <div class="template-name">Attention Yellow</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #e74c3c, #c0392b);"></div>
+                            <div class="template-name">Action Red</div>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-color" style="background: linear-gradient(135deg, #00bcd4, #0097a7);"></div>
+                            <div class="template-name">Trust Cyan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    <i class="fas fa-rocket"></i> Launch Campaign
+                </button>
+            </form>
+
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    <span>Processing emails...</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-container" id="statusContainer">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="status-message status-{% if 'Failed' in message %}error{% else %}success{% endif %}">
+                            <i class="fas fa-{% if 'Failed' in message %}exclamation-circle{% else %}check-circle{% endif %}"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 StrongBody.ai | Health Innovation Platform</p>
+    </footer>
 
     <script>
-        function showLoading() {
-            document.getElementById("loading").style.display = "block";
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('file-input');
+            const fileName = document.getElementById('file-name');
+            const form = document.getElementById('emailForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    fileName.textContent = fileInput.files[0].name;
+                    fileName.style.display = 'block';
+                } else {
+                    fileName.style.display = 'none';
+                }
+            });
+
+            form.addEventListener('submit', function(e) {
+                if (fileInput.files.length > 0) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    progressContainer.style.display = 'block';
+                    
+                    // Simulate progress for better UX
+                    let progress = 0;
+                    const interval = setInterval(function() {
+                        if (progress < 95) {
+                            progress += Math.random() * 5;
+                            progressFill.style.width = progress + '%';
+                            progressPercent.textContent = Math.round(progress) + '%';
+                        } else {
+                            clearInterval(interval);
+                        }
+                    }, 300);
+                }
+            });
+        });
     </script>
 </body>
 </html>
