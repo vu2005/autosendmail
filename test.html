@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to StrongBody.ai!</title>
+    <style>
+        /* Reset styles for better email client compatibility */
+        body,
+        table,
+        td,
+        div,
+        p,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: -apple-system, BlinkMacMacFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* General styles (will be inlined where possible) */
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 0;
+            }
+
+            .email-header,
+            .email-body,
+            .email-footer {
+                padding: 20px !important;
+            }
+
+            .hero-image {
+                max-width: 250px !important;
+                height: 150px !important;
+            }
+
+            .welcome-title {
+                font-size: 24px !important;
+            }
+
+            .download-btn {
+                display: block !important;
+                margin: 10px auto !important;
+                max-width: 250px !important;
+            }
+
+            .social-link {
+                width: 30px !important;
+                height: 30px !important;
+                line-height: 30px !important;
+                font-size: 16px !important;
+            }
+
+            .footer-navigation td {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                padding-bottom: 10px !important;
+            }
+
+            .app-store-btn {
+                height: 35px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background-color: #f5f5f5; color: #333;">
+    <div class="email-container"
+        style="max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+            style="background-color: #ffffff; padding: 30px 40px 20px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+            <tr>
+                <td align="center" style="padding: 30px 30px 20px;">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <img src="https://admin.StrongBody.ai/static/media/logo-strong-body.c19c8d8ff1aee7ff35b7.png"
+                            alt="StrongBody Logo" width="150"
+                            style="display: block; margin: 0 auto; max-width: 150px; height: auto;">
+                    </div>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                        class="hero-image"
+                        style="width: 100%; max-width: 300px; height: 180px; background-color: #f0f0f0; border-radius: 8px; border: 2px solid #e0e0e0;">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <svg viewBox="0 0 24 24" fill="none" width="80" height="80"
+                                    style="width: 80px; height: 80px; stroke: #ccc; stroke-width: 2;">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="9" y1="9" x2="15" y2="15" />
+                                    <line x1="15" y1="9" x2="9" y2="15" />
+                                </svg>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="padding: 40px;">
+            <tr>
+                <td style="padding: 40px;">
+                    <h1 class="welcome-title"
+                        style="color: #e74c3c; font-size: 28px; font-weight: bold; margin-bottom: 20px; text-align: center;">
+                        Welcome to Your Health & Wellness Journey!</h1>
+
+                    <p class="greeting" style="font-size: 16px; color: #333; margin-bottom: 15px;">Dear {{.UserName}},
+                    </p>
+
+                    <p class="welcome-text"
+                        style="font-size: 16px; color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Welcome to **StrongBody.ai** – we are delighted to have you join our growing community of health
+                        and wellness enthusiasts!
+                    </p>
+                    <p class="welcome-text"
+                        style="font-size: 16px; color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        **StrongBody.ai** is more than just a wellness platform. It’s your global marketplace for health
+                        & wellness experts, premium products, and expert shops, offering personalized services, flexible
+                        scheduling, and online consultation tailored to your lifestyle. We provide tools, expert
+                        content, and a vibrant community to support your health goals all in one place.
+                    </p>
+
+                    <h2 class="section-title"
+                        style="color: #333; font-size: 18px; font-weight: bold; margin: 30px 0 15px 0;">Download the
+                        StrongBody App</h2>
+
+                    <p class="welcome-text"
+                        style="font-size: 16px; color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        For the best experience, download our mobile app and access your wellness tools anytime,
+                        anywhere:
+                    </p>
+
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                        class="app-download-footer" style="margin-top: 20px; margin-bottom: 30px;">
+                        <tr>
+                            <td style="padding: 0 7.5px;">
+                                <a href="https://play.google.com/store/apps/details?id=your.android.app.id"
+                                    target="_blank"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Get it on Google Play" class="app-store-btn" width="120"
+                                        style="height: 40px; display: block;"></a>
+                            </td>
+                            <td style="padding: 0 7.5px;">
+                                <a href="https://apps.apple.com/us/app/your-ios-app-id" target="_blank"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                        alt="Download on App Store" class="app-store-btn" width="120"
+                                        style="height: 40px; display: block;"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h2 class="section-title"
+                        style="color: #333; font-size: 18px; font-weight: bold; margin: 30px 0 15px 0;">Customer
+                        Support</h2>
+
+                    <p class="welcome-text"
+                        style="font-size: 16px; color: #666; margin-bottom: 10px; line-height: 1.6;">
+                        Our customer care team is here to help you with any questions or concerns:
+                    </p>
+                    <ul style="list-style-type: none; padding: 0; margin-bottom: 20px;">
+                        <li style="margin-bottom: 5px; font-size: 16px; color: #666;">
+                            <strong>Email:</strong> <a href="mailto:strongbody@strongbody.ai" class="support-link"
+                                style="color: #e74c3c; text-decoration: none;">strongbody@strongbody.ai</a>
+                        </li>
+                        <li style="margin-bottom: 5px; font-size: 16px; color: #666;">
+                            <strong>Phone:</strong> <a href="tel:+6597400418" class="support-link"
+                                style="color: #e74c3c; text-decoration: none;">+65 9740 0418</a>
+                        </li>
+                        <li style="margin-bottom: 5px; font-size: 16px; color: #666;">
+                            <strong>Live Chat:</strong> Available 24/7 on our <a href="https://strongbody.ai"
+                                target="_blank" class="support-link"
+                                style="color: #e74c3c; text-decoration: none;">website</a>
+                        </li>
+                    </ul>
+
+                    <p class="support-text" style="font-size: 16px; color: #666; margin-top: 30px; text-align: center;">
+                        We look forward to supporting you on your health and wellness journey and helping you achieve
+                        your personal wellness goals.
+                        <br><br>
+                        Best regards,<br>
+                        The StrongBody Team
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+            style="background-color: #e8e8e8; padding: 30px 40px; text-align: center;">
+            <tr>
+                <td align="center" style="padding: 30px 40px;">
+                    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Follow us on social media for
+                        wellness tips and exclusive offers:</p>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                        class="social-links" style="margin-bottom: 25px;">
+                        <tr>
+                            <td style="padding: 0 10px;">
+                                <a href="https://facebook.com/strongbody.ai" target="_blank"
+                                    style="display: inline-block; width: 40px; height: 40px; background-color: #3b5998; border-radius: 50%; line-height: 40px; text-align: center; color: white; text-decoration: none; font-size: 18px;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                                        alt="Facebook" width="40" height="40"
+                                        style="display: block; border-radius: 50%;">
+                                </a>
+                            </td>
+                            <td style="padding: 0 10px;">
+                                <a href="https://instagram.com/strongbody.ai" target="_blank"
+                                    style="display: inline-block; width: 40px; height: 40px; background-color: #E1306C; border-radius: 50%; line-height: 40px; text-align: center; color: white; text-decoration: none; font-size: 18px;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                                        alt="Instagram" width="40" height="40"
+                                        style="display: block; border-radius: 50%;">
+                                </a>
+                            </td>
+                            <td style="padding: 0 10px;">
+                                <a href="https://linkedin.com/company/strongbody.ai" target="_blank"
+                                    style="display: inline-block; width: 40px; height: 40px; background-color: #0077B5; border-radius: 50%; line-height: 40px; text-align: center; color: white; text-decoration: none; font-size: 18px;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                        alt="LinkedIn" width="40" height="40"
+                                        style="display: block; border-radius: 50%;">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                        class="footer-navigation" style="margin-bottom: 20px;">
+                        <tr>
+                            <td style="padding: 0 10px;">
+                                <a href="#" class="footer-nav-link"
+                                    style="color: #28a745; text-decoration: none; font-size: 14px; font-weight: 500;">Unsubscribe</a>
+                            </td>
+                            <td style="padding: 0 10px;">
+                                <a href="#" class="footer-nav-link"
+                                    style="color: #28a745; text-decoration: none; font-size: 14px; font-weight: 500;">Update
+                                    Preferences</a>
+                            </td>
+                            <td style="padding: 0 10px;">
+                                <a href="mailto:strongbody@strongbody.ai" class="footer-nav-link"
+                                    style="color: #28a745; text-decoration: none; font-size: 14px; font-weight: 500;">Contact
+                                    Support</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p class="footer-description"
+                        style="font-size: 14px; color: #666; margin-bottom: 10px; line-height: 1.5;">
+                        You received this email because you signed up for StrongBody.ai.
+                    </p>
+
+                    <p class="footer-description"
+                        style="font-size: 14px; color: #666; margin-bottom: 10px; line-height: 1.5;">
+                        © StrongBody SG PTE., LTD., 2022
+                    </p>
+                    <p class="footer-address" style="font-size: 13px; color: #888; margin-bottom: 20px;">
+                        105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ SENDER_NAME = "StrongBody"
 email_counter = 0
 
 # Fixed link for all emails
-FIXED_LINK = "https://strongbody.ai/?ref=alison-olivia"
+FIXED_LINK = "https://strongbody.ai/?ref=stronghealth"
 
 # Button color variations
 BUTTON_COLORS = [
